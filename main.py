@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-import math_fun
+import math_fun as m1
 app=FastAPI()  #Creating object
 
 @app.get('/home/')    #defines end point function
@@ -8,7 +8,7 @@ def home_fun():
 
 @app.post('/home/')
 def home_fun(name:str,age:int,city:str,n:int):      #name may be same or different
-    data = math_fun.Maths_fun(5,6)
+    data = m1.Mahts_fun(5,6)
     return{"User Name : ":name, "User Age : ":age,"City : ":city,"Maths Operation : ":data}
 
 @app.put('/student_update/')
